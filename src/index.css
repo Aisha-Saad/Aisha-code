@@ -20,10 +20,11 @@ body{
 }
 
 .navbar{
-    @apply absolute top-full mt-2 ring-inset min-w-40 p-2 bg-zinc-50/10 rounded-2xl ring-1 
-    ring-zinc-50/5
-    scale-90 isolate blur-sm opacity-0 invisible transition-[opacity,transform,filter]
-    
+    @apply absolute top-full mt-40 ring-1 right-0 ring-inset min-w-40 p-2 bg-zinc-50/10 rounded-2xl  
+    ring-zinc-50/55
+    scale-90 isolate blur-sm opacity-0 invisible transition-[opacity,transform,filter] 
+    md:static md:flex md:items-center md:mt-0
+    md:opacity-100 md:blur-0
 }
 
 .navbar.active{
@@ -40,5 +41,6 @@ body{
 
 .navbar .active-box{
   @apply absolute top-2 left-2 right-2 h-9 bg-zinc-50
-  rounded-lg -z-10 transition-all duration-500
+  rounded-lg -z-10 transition-[top,left] duration-500
 }
+
