@@ -8,8 +8,7 @@ html{
     scroll-behavior: smooth;
 }
 
-
-body{
+  body{
     @apply bg-zinc-900 text-zinc-50
 }
 
@@ -19,7 +18,7 @@ body{
     backdrop-blur-2xl hover:bg-zinc-50/15 transition-[transform,background-color] active:scale-95 
 }
 
-navbar{
+.navbar{
     @apply absolute top-full mt-1 ring-1 right-0 ring-inset min-w-40 p-2 bg-zinc-50/10 rounded-2xl  
     ring-zinc-50/55
     scale-90 isolate blur-sm opacity-0 invisible transition-[opacity,transform,filter] 
@@ -43,9 +42,21 @@ navbar{
   @apply absolute top-2 left-2 right-2 h-9 bg-zinc-50
   rounded-lg -z-10 transition-[top,left] duration-500
 }
+ 
+
+ .btn{
+   @apply  max-w-max h-9 flex items-center gap-2 px-4 rounded-xl font-medium text-sm ring-1 
+} 
 
 
-/* .btn{
-    @apply max-w-max h-9 flex items-center gap-2 px-4 rounded-xl font-medium text-sm ring-1 :
-} */
+.material-symbols-rounded {
+    @apply w-[1em] h-[1em] overflow-hidden;
+    font-variation-settings: "FILL" 0, "wght" 400, "GRAD" 0, "opsz" 24;
+}
+
+
+.container{
+    @apply px-4 mx-auto lg:px-8 xl:max-w-6xl
+}
+
 
