@@ -3,6 +3,7 @@ import React from 'react'
 import Header from './components/Header'
 import Hero from './components/Hero'
 import About from './components/About'
+import Skills from './components/Skills'
 
 const App = () => {
   return (
@@ -11,6 +12,7 @@ const App = () => {
         <main>
           <Hero/>
           <About/>
+          <Skills/>
         </main>
     </>
    
