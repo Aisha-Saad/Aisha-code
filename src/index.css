@@ -19,11 +19,11 @@ html{
 }
 
 .navbar{
-    @apply absolute top-full mt-1 ring-1 right-0 ring-inset min-w-40 p-2 bg-zinc-50/10 rounded-2xl  
+    @apply absolute top-full mt-2 ring-1 right-0 ring-inset min-w-40 p-4 bg-zinc-50/10 rounded-2xl  
     ring-zinc-50/55
     scale-90 isolate blur-sm opacity-0 invisible transition-[opacity,transform,filter] 
     md:static md:flex md:items-center md:mt-0
-    md:opacity-100 md:blur-0 
+    md:opacity-100 md:blur-0 md:visible 
 }
 
 .navbar.active{
@@ -31,7 +31,7 @@ html{
 }
 .nav-link{
     @apply grid items-center h-9 px-4 text-sm font-medium tracking-wide 
-    text-zinc-50/50 hover:text-zinc-50 transition-colors
+    text-zinc-50/50 hover:text-zinc-50 transition-colors 
 }
 
 .nav-link.active{
@@ -107,4 +107,6 @@ html{
 }
 
 
-
+.title-1{
+    @apply text-[22px] font-normal
+}
