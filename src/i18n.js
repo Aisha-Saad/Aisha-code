@@ -1,26 +1,27 @@
+// src/i18n.js
 import i18n from 'i18next';
 import { initReactI18next } from 'react-i18next';
-
-import Backend from 'i18next-http-backend';
+import HttpApi from 'i18next-http-backend';
 import LanguageDetector from 'i18next-browser-languagedetector';
 
-
 i18n
- 
-  .use(Backend)
-  
+  .use(HttpApi)
   .use(LanguageDetector)
- 
   .use(initReactI18next)
- 
   .init({
-    fallbackLng: 'en',
-    debug: true,
+    supportedLngs: ['en', 'ar'], // أضف اللغات التي تريد دعمها
+    fallbackLng: 'en',           // اللغة الافتراضية
 
-    interpolation: {
-      escapeValue: false, // not needed for react as it escapes by default
-    }
+    backend: {
+      loadPath: '/locales/{{lng}}/translation.json', // مكان ملفات الترجمة
+    },
+    detection: {
+      order: ['localStorage', 'cookie', 'navigator', 'htmlTag'],
+      caches: ['localStorage', 'cookie'],
+    },
+    react: {
+      useSuspense: false,
+    },
   });
-
 
 export default i18n;

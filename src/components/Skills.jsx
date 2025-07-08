@@ -1,7 +1,5 @@
 import React from 'react'
 import SkilCard from './SkilCard';
-import { useTranslation } from 'react-i18next';
-import { useEffect } from 'react';
 
 const Skills = () => {
 
@@ -38,20 +36,16 @@ const Skills = () => {
 
   ];
 
-  const { t, i18n } = useTranslation();
+ 
 
 
-  useEffect(() => {
 
-    i18n.changeLanguage("en")
-
-  }, [i18n]);
   return (
     <section className="section">
       <div className="container">
-        <h2 className=" headline-2 ">{t(" Essential Tools use")}</h2>
+        <h2 className=" headline-2 ">" Essential Tools use"</h2>
         <p className=" to-zinc-400 mt-3 mb-8 max-w-[50ch]">
-         {t(" Discover the powerful tools and technologies I use to create exceptional,high-performing websites & applications.")}
+         " Discover the powerful tools and technologies I use to create exceptional,high-performing websites & applications."
 
         </p>
         <div className=" grid gap-3 grid-cols-[repeat(auto-fill,minmax(250px,_1fr))]">

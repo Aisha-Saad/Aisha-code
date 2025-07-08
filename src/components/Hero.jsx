@@ -1,6 +1,11 @@
 import React from 'react'
 import { ButtonPrimary, ButtonOutline } from "./Button"
+import { useTranslation } from 'react-i18next';
+
+
 const Hero = () => {
+
+     const { t} = useTranslation();
     return (
 
         <section id='home' className='pt-28 lg:pt-36'>
@@ -23,11 +28,11 @@ const Hero = () => {
                                 </span>
 
                             </span>
-                            Available for work
+                           {t(' Available for work')}
                         </div>
                     </div>
                     <h2 className=" headline-1 max-w-[15ch] sm:max-w-[20ch] lg:max-w-[15ch] mt-5 mb-8 lg:mb-10">
-                        Building scalable modern websites for the future
+                       {t('Building scalable modern websites for the future' )}
                     </h2>
                     <div className="flex items-center gap-3 ">
                         <ButtonPrimary label="Download CV" icon="download" />
